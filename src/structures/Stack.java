@@ -17,7 +17,7 @@ public class Stack<T> {
 	/**
 	 * Initializes stack to empty.
 	 */
-	public Stack() {
+	public Stack(){
 		items = new ArrayList<T>();
 	}
 
@@ -26,7 +26,7 @@ public class Stack<T> {
 	 * 
 	 * @param item Item to push.
 	 */
-	public void push(T item) {
+	public void push(T item){
 		items.add(item);
 	}
 
@@ -36,9 +36,8 @@ public class Stack<T> {
 	 * @return Popped item.
 	 * @throws NoSuchElementException If stack is empty.
 	 */
-	public T pop() 
-			throws NoSuchElementException {
-		if (items.isEmpty()) {
+	public T pop() throws NoSuchElementException{
+		if (items.isEmpty()){
 			throw new NoSuchElementException("can't pop from an empty stack");
 		}
 		return items.remove(items.size()-1);
@@ -51,8 +50,8 @@ public class Stack<T> {
 	 * @throws NoSuchElementException If stack is empty.
 	 */
 	public T peek() 
-			throws NoSuchElementException {
-		if (items.size() == 0) {
+			throws NoSuchElementException{
+		if (items.size() == 0){
 			throw new NoSuchElementException("can't peek into an empty stack");
 		}
 		return items.get(items.size()-1);
@@ -63,7 +62,7 @@ public class Stack<T> {
 	 * 
 	 * @return True if stack is empty, false if not.
 	 */
-	public boolean isEmpty() {
+	public boolean isEmpty(){
 		return items.isEmpty();
 	}
 
@@ -72,14 +71,14 @@ public class Stack<T> {
 	 * 
 	 * @return Number of items in stack.
 	 */
-	public int size() {
+	public int size(){
 		return items.size();
 	}
 
 	/**
 	 * Empties the stack.
 	 */
-	public void clear() {
+	public void clear(){
 		items.clear();
 	}
 }
